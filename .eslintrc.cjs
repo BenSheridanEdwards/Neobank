@@ -23,5 +23,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/comma-dangle": 0,
     "import/no-extraneous-dependencies": "warn",
+    "react/jsx-props-no-spreading": 0,
+    "import/prefer-default-export": 0,
   },
 };
