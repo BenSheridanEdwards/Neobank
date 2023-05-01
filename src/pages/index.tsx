@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Author } from "@/components/atoms/Author/Author";
 import { BenefitList } from "@/components/atoms/BenefitList/BenefitList";
 import { Button } from "@/components/atoms/Button/Button";
 import { Card } from "@/components/atoms/Card/Card";
@@ -335,6 +336,11 @@ export default function Home() {
                 Money is only a tool. It will take you wherever you wish, but it
                 will not replace you as the driver.
               </p>
+              <Author
+                authorName="Janet Jensen"
+                jobTitle="Product Manager"
+                avatarImageUrl="/assets/JanetJensenAvatar.svg"
+              />
             </Card>
             <Card additionalClassName="flex flex-col w-[280px] gap-8">
               <Image
@@ -347,6 +353,11 @@ export default function Home() {
                 Money makes your life easier. If you&apos;re lucky to have it,
                 you&apos;re lucky.
               </p>
+              <Author
+                authorName="Steve Mark"
+                jobTitle="Founder & Leader"
+                avatarImageUrl="/assets/SteveMarkAvatar.svg"
+              />
             </Card>
             <Card additionalClassName="flex flex-col w-[280px] gap-8">
               <Image
@@ -359,6 +370,11 @@ export default function Home() {
                 It is usually people in the money business, finance, and
                 international trade that are really rich.
               </p>
+              <Author
+                authorName="Kenn Gallagher"
+                jobTitle="Head of Design"
+                avatarImageUrl="/assets/KennGallagherAvatar.svg"
+              />
             </Card>
           </div>
         </section>
