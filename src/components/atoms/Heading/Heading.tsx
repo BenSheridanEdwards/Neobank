@@ -24,6 +24,7 @@ export function Heading({
     "text-3xl font-bold leading-snug": visualLevel === "h3",
     "text-2xl font-bold leading-snug": visualLevel === "h4",
     "text-xl font-bold leading-snug": visualLevel === "h5",
+    "text-lg font-bold leading-snug": visualLevel === "h6",
   });
 
   return (

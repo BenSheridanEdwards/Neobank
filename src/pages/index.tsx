@@ -213,14 +213,14 @@ export default function Home() {
               Get started
             </Button>
           </div>
-          <div className="relative">
+          <div className="relative px-4">
             <Image
               src="/assets/ConcentricCircles.svg"
               alt="Background concentric circles"
               height={400}
               width={400}
             />
-            <Card additionalClassName="absolute top-0 -left-8 max-w-[204px] items-center flex flex-col text-center gap-3">
+            <Card additionalClassName="hidden sm:flex z-10 absolute top-[80px] -left-6 max-w-[204px] items-center flex flex-col text-center gap-2">
               <Image
                 src="/assets/ScanIcon.svg"
                 alt="Scan icon"
@@ -230,8 +230,134 @@ export default function Home() {
               <Heading visualLevel="h5" elementLevel="h3">
                 Scan Credit Cards
               </Heading>
-              <p className="text-[#B3B3B3]">
+              <p className="text-sm text-[#B3B3B3]">
                 Upload a photo of your credit card and we&apos;ll do the rest.
+              </p>
+            </Card>
+            <Card additionalClassName="absolute sm:top-[40px] w-full top-1/2 left-1/2 sm:translate-x-[unset] sm:translate-y-[unset] transform sm:left-[unset] -translate-x-1/2 -translate-y-1/2 h-fit sm:-right-6 max-w-[260px] items-center flex flex-col text-center gap-2">
+              <div className="flex w-full justify-between">
+                <Heading visualLevel="h6" elementLevel="h3">
+                  Online Analysis
+                </Heading>
+                <div className="flex items-center">
+                  <p className="text-sm text-white">12 Months</p>
+                  <Image
+                    src="/assets/ArrowDown.svg"
+                    alt="Arrow down"
+                    height={16}
+                    width={16}
+                  />
+                </div>
+              </div>
+              <div className="flex w-full justify-between">
+                <div className="text-left text-sm font-semibold">
+                  <p className="text-[#00D2AA]">£ 2,334,67</p>
+                  <p className="text-[#00D2AA] opacity-70">Income</p>
+                </div>
+                <div className="text-right text-sm font-semibold">
+                  <p className="text-[#00D9F5]">£ 5.31M</p>
+                  <p className="text-[#00D9F5] opacity-70">Expenses</p>
+                </div>
+              </div>
+              <div className="relative h-[72px] w-full">
+                <Image src="/assets/LineChart.svg" alt="Line chart" fill />
+              </div>
+              <div className="flex h-6 w-full items-center justify-between text-xs text-[#B3B3B3]">
+                <p>Jan</p>
+                <p>Feb</p>
+                <div className="from-95% rounded-lg bg-gradient-to-r from-[#00D2AA] to-[#00D9F5] p-1 text-[#14101D]">
+                  <p>Mar</p>
+                </div>
+                <p>Apr</p>
+                <p>May</p>
+                <p>Jun</p>
+                <p>Jul</p>
+              </div>
+            </Card>
+            <Card additionalClassName="absolute hidden sm:flex -bottom-6 left-[20%]">
+              <div className="flex w-full flex-col gap-3">
+                <Heading visualLevel="h6" elementLevel="h3">
+                  Payment Methods Available
+                </Heading>
+                <ul className="flex w-full justify-center gap-3">
+                  <li className="relative flex h-[34px] w-[38px] items-center justify-center rounded-md bg-white">
+                    <Image
+                      src="/assets/PaypalLogo.svg"
+                      alt="Paypal logo"
+                      height={18}
+                      width={20}
+                    />
+                  </li>
+                  <li className="relative flex h-[34px] w-[38px] items-center justify-center rounded-md bg-white">
+                    <Image
+                      src="/assets/AppleLogo.svg"
+                      alt="Apple logo"
+                      height={18}
+                      width={20}
+                    />
+                  </li>
+                  <li className="relative flex h-[34px] w-[38px] items-center justify-center rounded-md bg-white">
+                    <Image
+                      src="/assets/VisaLogo.svg"
+                      alt="Visa logo"
+                      height={24}
+                      width={27}
+                    />
+                  </li>
+                  <li className="relative flex h-[34px] w-[38px] items-center justify-center rounded-md bg-white">
+                    <Image
+                      src="/assets/ShopifyLogo.svg"
+                      alt="Shopify logo"
+                      height={26}
+                      width={30}
+                    />
+                  </li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </section>
+        <section className="my-20 flex w-full flex-col gap-8">
+          <div>
+            <Heading visualLevel="h2" elementLevel="h2">
+              What people are saying about us
+            </Heading>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8">
+            <Card additionalClassName="flex flex-col w-[280px] gap-8">
+              <Image
+                src="/assets/QuoteMark.svg"
+                alt="Quote mark"
+                width={40}
+                height={28}
+              />
+              <p className="text-lg font-medium text-white">
+                Money is only a tool. It will take you wherever you wish, but it
+                will not replace you as the driver.
+              </p>
+            </Card>
+            <Card additionalClassName="flex flex-col w-[280px] gap-8">
+              <Image
+                src="/assets/QuoteMark.svg"
+                alt="Quote mark"
+                width={40}
+                height={28}
+              />
+              <p className="text-lg font-medium text-white">
+                Money makes your life easier. If you&apos;re lucky to have it,
+                you&apos;re lucky.
+              </p>
+            </Card>
+            <Card additionalClassName="flex flex-col w-[280px] gap-8">
+              <Image
+                src="/assets/QuoteMark.svg"
+                alt="Quote mark"
+                width={40}
+                height={28}
+              />
+              <p className="text-lg font-medium text-white">
+                It is usually people in the money business, finance, and
+                international trade that are really rich.
               </p>
             </Card>
           </div>
