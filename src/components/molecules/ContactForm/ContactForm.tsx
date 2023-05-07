@@ -107,6 +107,7 @@ export function ContactForm() {
             onChange={handleChange}
             errorMessage={errors.name}
             value={formValues.name}
+            isRequired
           />
           <TextField
             label="Email"
@@ -114,6 +115,7 @@ export function ContactForm() {
             onChange={handleChange}
             errorMessage={errors.email}
             value={formValues.email}
+            isRequired
           />
           <TextareaField
             label="Message"
@@ -121,6 +123,7 @@ export function ContactForm() {
             onChange={handleChange}
             errorMessage={errors.message}
             value={formValues.message}
+            isRequired
           />
           <Button type="submit" variant="primary">
             Send

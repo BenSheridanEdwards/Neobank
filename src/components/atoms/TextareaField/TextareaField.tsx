@@ -8,6 +8,7 @@ interface TextareaFieldProps {
   value?: string;
   onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   errorMessage?: string;
+  isRequired?: boolean;
 }
 
 export function TextareaField({
@@ -17,6 +18,7 @@ export function TextareaField({
   onChange,
   value,
   errorMessage,
+  isRequired = false,
 }: TextareaFieldProps) {
   const [text, setText] = useState<string>("");
 
@@ -29,6 +31,7 @@ export function TextareaField({
     <div className="relative my-2 flex w-full flex-col sm:max-w-[320px]">
       <label htmlFor={name} className="font-semibold text-white">
         {label}
+        {isRequired && <span className="ml-1 text-[#FF4E5D]">*</span>}
       </label>
       <textarea
         id={name}
