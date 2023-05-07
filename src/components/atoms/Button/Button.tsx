@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import React, { ReactNode } from "react";
 import clsx from "clsx";
 
@@ -8,19 +9,21 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   leadingIcon?: string;
   onClick?: () => void;
   variant?: "primary" | "secondary" | "icon";
+  type?: "button" | "submit" | "reset";
 }
 
 export function Button({
-  additionalClassName,
+  additionalClassName = "",
   children,
   fullWidth,
   leadingIcon,
   onClick,
   variant,
+  type = "button",
   ...rest
 }: ButtonProps) {
   const buttonClassName = clsx({
-    "rounded-xl py-4 px-8 capitalize text-md": true,
+    "rounded-xl py-4 px-8 md:px-12 capitalize text-md ": true,
     "bg-gradient text-black hover:bg-gradientHover":
       variant === "primary" || !variant,
     "border-2 border-[#7DE7EB]": variant === "secondary",
@@ -32,7 +35,7 @@ export function Button({
     <button
       className={`${buttonClassName} ${additionalClassName}`}
       onClick={onClick}
-      type="button"
+      type={type}
       {...rest}
     >
       {!!leadingIcon && (

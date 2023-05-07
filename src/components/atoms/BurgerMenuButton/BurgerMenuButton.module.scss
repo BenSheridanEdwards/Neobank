@@ -169,3 +169,23 @@
     transform: scale(1);
   }
 }
+
+// Burger menu
+
+.slideMenuEnter {
+  transform: translateX(-100%);
+}
+
+.slideMenuEnterActive {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+
+.slideMenuExit {
+  transform: translateX(0);
+}
+
+.slideMenuExitActive {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
